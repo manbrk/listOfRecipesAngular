@@ -1,11 +1,4 @@
-li {
-  list-style-type: none;
-  padding: 5px;
-  border-left: 2px solid transparent;
-  transition: border-left 1s;
-}
 
-li:hover {
-  border-left: 2px solid floralwhite;
-  cursor: default;
+button {
+  float: right;
 }
