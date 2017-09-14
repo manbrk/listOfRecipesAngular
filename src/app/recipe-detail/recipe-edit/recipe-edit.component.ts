@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {Recipe} from '../../recipe.model';
 
@@ -8,6 +8,7 @@ import {Recipe} from '../../recipe.model';
   styleUrls: ['./recipe-edit.component.css']
 })
 export class RecipeEditComponent implements OnInit {
+  @ViewChild('f') signupForm: NgForm;
   @Input() recipe: Recipe;
 
   constructor() { }
@@ -15,8 +16,14 @@ export class RecipeEditComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubmit(form: NgForm) {
-    console.log(form);
+  onSubmit() {
+    console.log(this.signupForm);
+    console.log(this.signupForm.value);
+    console.log(new Date());
+
+    this.recipe.name = this.signupForm.value.name;
+    this.recipe.content = this.signupForm.value.content;
+    this.recipe.dateCreated = new Date();
   }
 
 }

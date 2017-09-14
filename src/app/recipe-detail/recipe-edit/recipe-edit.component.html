@@ -1,13 +1,16 @@
-<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+<form (ngSubmit)="onSubmit()" #f="ngForm">
   <label for="recipeName">Recipe Name</label>
   <input type="text" id="recipeName"
     [ngModel]="recipe.name"
     name="name">
   <br />
   <label for="recipeContent">Recipe Content</label>
-  <input type="text" id="recipeContent"
+  <!--<input type="text" id="recipeContent"-->
+    <!--[ngModel]="recipe.content"-->
+    <!--name="content">-->
+  <textarea id="recipeContent" name="content" rows="6"
     [ngModel]="recipe.content"
-    name="content">
+  ></textarea>
   <br />
   <button type="submit">Save</button>
 </form>
