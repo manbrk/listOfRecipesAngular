@@ -1,19 +1,23 @@
-<div>
-  {{ recipe.name }}
+<div class="content">
+
+  <div class="heading">
+    {{ recipe.name }}
+  </div>
+
+  <br />
+
+  <div>
+    {{ recipe.content }}
+  </div>
+
+  <br />
+
+  <div class="date">
+    {{ recipe.dateCreated }}
+  </div>
+
+  <br />
+
+  <button class="btn" type="button">Edit Recipe</button>
+
 </div>
-
-<br />
-
-<div>
-  {{ recipe.content }}
-</div>
-
-<br />
-
-<div>
-  {{ recipe.dateCreated }}
-</div>
-
-<br />
-
-<button>Edit</button>
