@@ -18,6 +18,7 @@
 
   <br />
 
-  <button class="btn" type="button">Edit Recipe</button>
+  <button class="btn" (click)="onEdit(recipe)">Edit Recipe</button>
+  <app-recipe-edit [recipe]="recipe"></app-recipe-edit>
 
 </div>

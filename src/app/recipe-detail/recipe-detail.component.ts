@@ -13,4 +13,7 @@ export class RecipeDetailComponent implements OnInit {
   ngOnInit() {
   }
 
+  onEdit(recipe: Recipe) {
+    console.log(recipe);
+  }
 }
