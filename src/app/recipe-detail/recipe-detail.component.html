@@ -19,6 +19,8 @@
   <br />
 
   <button class="btn" (click)="onEdit(recipe)">Edit Recipe</button>
-  <app-recipe-edit [recipe]="recipe"></app-recipe-edit>
+  <app-recipe-edit *ngIf="editMode"
+    [recipe]="recipe"
+    (editModeDone)="onEditDone()"></app-recipe-edit>
 
 </div>

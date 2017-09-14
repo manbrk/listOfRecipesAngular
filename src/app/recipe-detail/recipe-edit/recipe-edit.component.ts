@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, ViewChild} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {Recipe} from '../../recipe.model';
 
@@ -11,19 +11,18 @@ export class RecipeEditComponent implements OnInit {
   @ViewChild('f') signupForm: NgForm;
   @Input() recipe: Recipe;
 
+  @Output() editModeDone = new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {
   }
 
   onSubmit() {
-    console.log(this.signupForm);
-    console.log(this.signupForm.value);
-    console.log(new Date());
-
     this.recipe.name = this.signupForm.value.name;
     this.recipe.content = this.signupForm.value.content;
     this.recipe.dateCreated = new Date();
+    this.editModeDone.emit();
   }
 
 }
