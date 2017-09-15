@@ -10,6 +10,7 @@ import {RecipeService} from './recipe.service';
 export class AppComponent implements OnInit {
   selectedRecipe: Recipe;
   title = 'Список Рецептов';
+  addMode = false;
 
   constructor(private recipeService: RecipeService) {
   }
@@ -21,9 +22,19 @@ export class AppComponent implements OnInit {
          this.selectedRecipe = recipe;
        }
      );
+   this.addMode = false;
   }
 
   deleteModeDone() {
     this.selectedRecipe = null;
   }
+
+  onAddMode() {
+    this.addMode = true;
+  }
+
+  addModeDone() {
+    this.addMode = false;
+  }
+
 }

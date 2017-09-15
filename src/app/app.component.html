@@ -13,7 +13,11 @@
     <ng-template #infoText>
       <p>Choose a Recipe from Recipe List</p>
       <p>or</p>
-      <p><app-recipe-add></app-recipe-add></p>
+      <p>
+        <button class="btn" (click)="onAddMode()" *ngIf="!addMode">Add Recipe</button>
+        <app-recipe-add *ngIf="addMode"
+        (onAddDone)="addModeDone()"></app-recipe-add>
+      </p>
     </ng-template>
   </div>
   <div class="box footer" (click)="deleteModeDone()">дата создания рецепта</div>
