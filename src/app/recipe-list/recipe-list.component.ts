@@ -14,7 +14,6 @@ export class RecipeListComponent implements OnInit, DoCheck {
 
   ngOnInit() {
     this.recipes = this.recipeService.getRecipes();
-    console.log(this.recipeService.recipeSelected);
   }
 
   ngDoCheck() {

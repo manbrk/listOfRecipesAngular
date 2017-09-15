@@ -1,4 +1,4 @@
-import {Component, DoCheck, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Recipe} from './recipe.model';
 import {RecipeService} from './recipe.service';
 
@@ -21,6 +21,11 @@ export class AppComponent implements OnInit {
          this.selectedRecipe = recipe;
        }
      );
-   console.log(this.selectedRecipe);
   }
+
+  deleteModeDone() {
+    this.selectedRecipe = null;
+
+  }
+
 }

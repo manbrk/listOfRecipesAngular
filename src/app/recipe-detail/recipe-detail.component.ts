@@ -9,14 +9,15 @@ import {RecipeService} from '../recipe.service';
 })
 export class RecipeDetailComponent implements OnInit {
   @Input() recipe: Recipe;
+  @Output() deleteMode = new EventEmitter();
   editMode = false;
+
   constructor(private recipeService: RecipeService) { }
 
   ngOnInit() {
   }
 
-  onEdit(recipe: Recipe) {
-    console.log(recipe);
+  onEdit() {
     this.editMode = true;
   }
 
@@ -26,5 +27,6 @@ export class RecipeDetailComponent implements OnInit {
 
   onDelete(recipe: Recipe) {
     this.recipeService.deleteRecipe(recipe);
+    this.deleteMode.emit();
   }
 }
