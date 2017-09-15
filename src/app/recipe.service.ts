@@ -16,14 +16,16 @@ export class RecipeService {
   ];
 
   getRecipes() {
-    return this.recipes.slice();
+    // return this.recipes.slice();
+    return this.recipes;
   }
 
   deleteRecipe(recipe) {
     this.recipes.splice(this.recipes.indexOf(recipe), 1);
   }
 
-  addRecipe(recipe) {
-
+  addRecipe(recipe: Recipe) {
+    this.recipes.push(recipe);
+    console.log('add button press');
   }
 }

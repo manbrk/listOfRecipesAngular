@@ -1,0 +1,15 @@
+<p>Add Recipe</p>
+<form (ngSubmit)="onAdd()" #f="ngForm">
+  <label for="recipeName">Recipe Name</label>
+  <input type="text" id="recipeName"
+         ngModel
+         name="name">
+  <br />
+  <label for="recipeContent">Recipe Content</label>
+  <textarea id="recipeContent" name="content" rows="6"
+            ngModel
+  ></textarea>
+  <br />
+  <button type="submit">Add</button>
+</form>
+<button (click)="onCancel()">Cancel</button>
