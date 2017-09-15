@@ -22,7 +22,14 @@ export class RecipeEditComponent implements OnInit {
     this.recipe.name = this.signupForm.value.name;
     this.recipe.content = this.signupForm.value.content;
     this.recipe.dateCreated = new Date();
+    this.recipe.versions.push({
+      dateModify: new Date(),
+      name: this.signupForm.value.name,
+      content: this.signupForm.value.content
+    });
     this.editModeDone.emit();
+
+    console.log(this.recipe);
   }
 
   onCancel() {
