@@ -25,4 +25,7 @@ export class RecipeEditComponent implements OnInit {
     this.editModeDone.emit();
   }
 
+  onCancel() {
+    this.editModeDone.emit();
+  }
 }
