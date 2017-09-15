@@ -10,6 +10,7 @@ import {RecipeService} from '../recipe.service';
 export class RecipeDetailComponent implements OnInit {
   @Input() recipe: Recipe;
   @Output() deleteMode = new EventEmitter();
+  @Output() back = new EventEmitter();
   editMode = false;
 
   constructor(private recipeService: RecipeService) { }
@@ -28,5 +29,9 @@ export class RecipeDetailComponent implements OnInit {
   onDelete(recipe: Recipe) {
     this.recipeService.deleteRecipe(recipe);
     this.deleteMode.emit();
+  }
+
+  onBack() {
+    this.back.emit();
   }
 }

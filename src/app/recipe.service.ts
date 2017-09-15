@@ -22,4 +22,8 @@ export class RecipeService {
   deleteRecipe(recipe) {
     this.recipes.splice(this.recipes.indexOf(recipe), 1);
   }
+
+  addRecipe(recipe) {
+
+  }
 }

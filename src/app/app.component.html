@@ -8,10 +8,11 @@
     <app-recipe-detail
     *ngIf="selectedRecipe; else infoText"
     [recipe]="selectedRecipe"
-    (deleteMode)="deleteModeDone()"></app-recipe-detail>
+    (deleteMode)="deleteModeDone()"
+    (back)="deleteModeDone()"></app-recipe-detail>
     <ng-template #infoText>
       <p>Choose a Recipe from Recipe List</p>
     </ng-template>
   </div>
-  <div class="box footer" (click)="toConsole(selectedRecipe)">дата создания рецепта</div>
+  <div class="box footer" (click)="deleteModeDone()">дата создания рецепта</div>
 </div>

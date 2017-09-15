@@ -25,7 +25,5 @@ export class AppComponent implements OnInit {
 
   deleteModeDone() {
     this.selectedRecipe = null;
-
   }
-
 }
