@@ -9,6 +9,7 @@ import {RecipeService} from './recipe.service';
 import { RecipeEditComponent } from './recipe-detail/recipe-edit/recipe-edit.component';
 import {FormsModule} from '@angular/forms';
 import { RecipeAddComponent } from './recipe-add/recipe-add.component';
+import { RecipeVersionComponent } from './recipe-version/recipe-version.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RecipeAddComponent } from './recipe-add/recipe-add.component';
     RecipeDetailComponent,
     RecipeItemComponent,
     RecipeEditComponent,
-    RecipeAddComponent
+    RecipeAddComponent,
+    RecipeVersionComponent
   ],
   imports: [
     BrowserModule,

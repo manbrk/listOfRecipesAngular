@@ -3,7 +3,11 @@
   <div class="box sidebar">
     <app-recipe-list></app-recipe-list>
   </div>
-  <div class="box sidebar2">версии рецепта</div>
+  <div class="box sidebar2">
+    <app-recipe-version
+      *ngIf="selectedRecipe"
+      [recipe]="selectedRecipe"></app-recipe-version>
+  </div>
   <div class="box content">
     <app-recipe-detail
     *ngIf="selectedRecipe; else infoText"
@@ -20,5 +24,7 @@
       </p>
     </ng-template>
   </div>
-  <div class="box footer" (click)="deleteModeDone()">дата создания рецепта</div>
+  <div class="box footer">
+    footer
+  </div>
 </div>
