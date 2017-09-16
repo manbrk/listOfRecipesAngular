@@ -28,8 +28,6 @@ export class RecipeEditComponent implements OnInit {
       content: this.signupForm.value.content
     });
     this.editModeDone.emit();
-
-    console.log(this.recipe);
   }
 
   onCancel() {

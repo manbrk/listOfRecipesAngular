@@ -19,7 +19,7 @@ export class RecipeAddComponent implements OnInit {
   }
 
   onAdd() {
-    this.recipe = new Recipe(this.signupForm.value.name, this.signupForm.value.content, new Date());
+    this.recipe = new Recipe(this.signupForm.value.name, this.signupForm.value.content, new Date(), []);
     this.recipeService.addRecipe(this.recipe);
     this.recipeService.recipeSelected.emit(this.recipe);
     this.onAddDone.emit();
